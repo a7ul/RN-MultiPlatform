@@ -1,0 +1,48 @@
+{
+  "name": "multiplatform",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "seperator:test": "======================== TEST AND LINT SCRIPTS =================================",
+    "test": "NODE_ENV='test' jest --verbose --forceExit",
+    "test:watch": "npm run test -- --watch",
+    "test:update": "npm run test -- --updateSnapshot",
+    "test:coverage": "npm run test -- --coverage  && open ./coverage/lcov-report/index.html",
+    "lint": "echo 'Running eslint' && eslint app/",
+    "lint:fix": "npm run lint -- --fix",
+    "seperator:rn": "======================== RN SCRIPTS ==========================================",
+    "start:ios": "react-native run-ios",
+    "start:android": "react-native run-android",
+    "seperator:web": "======================== WEB SCRIPTS ==========================================",
+    "start:web": "npm run compile:dev",
+    "build:web": "npm run compile:prod",
+    "seperator:helper": "========================WEB - HELPER SCRIPTS =======================================",
+    "prepare:dev": "cp index.html bundle/index.html && rexreplace 'bundle/' '' bundle/index.html",
+    "compile:dev": "npm run prepare:dev && NODE_ENV='development' webpack-dev-server --progress --config webpack.config.dev.js",
+    "compile:prod": "NODE_ENV='production' webpack -p --config webpack.config.prod.js"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-dom": "16.0.0-alpha.6",
+    "react-native": "0.44.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react-native": "1.9.2",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "jest": "20.0.3",
+    "react-hot-loader": "3.0.0-beta.7",
+    "react-test-renderer": "16.0.0-alpha.6",
+    "rexreplace": "^2.2.3",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
