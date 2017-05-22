@@ -33,7 +33,7 @@ module.exports = {
     sourceMapFilename: 'bundle.js.map'
   },
   resolve: {
-    extensions: ['.web.js','.js', '.jsx']
+    extensions: ['.web.js', '.js', '.jsx']
   },
   module: {
     rules: [
@@ -59,12 +59,12 @@ module.exports = {
     definePlugin,
     globalHMRPlugin,
     readableHMRUpdatesPlugin,
-    // friendlyErrorMessagePlugin
+    friendlyErrorMessagePlugin
   ],
   target: 'web',
   devServer: {
     port: devServerPort,
-    quiet: false, // This is because we are using another friendlyErrorMessagePlugin
+    quiet: true, // This is because we are using another friendlyErrorMessagePlugin
     contentBase: path.resolve(__dirname, 'bundle'),
     // match the output path
     publicPath: '/',
