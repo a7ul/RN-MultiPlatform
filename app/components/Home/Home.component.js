@@ -1,9 +1,9 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import styles from './Home.component.style';
-import {View,Text} from 'react-native';
+import {View, Text} from 'react-native';
 
 class HomeView extends Component {
-  render(){
+  render () {
     return (
       <View style={styles.container}>
         <Text>Test</Text>
