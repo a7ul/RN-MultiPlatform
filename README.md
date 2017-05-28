@@ -18,6 +18,6 @@ To try a demo.
 <br>
 
 <div style="text-align:center">
-  <img src="https://github.com/master-atul/MultiPlatform/raw/master/screens/demo.png" style="width: 100%;display: inline;">
+  <img src="https://raw.githubusercontent.com/master-atul/RN-MultiPlatform/master/screens/demo.png" style="width: 100%;display: inline;">
 </div>
 <br>
