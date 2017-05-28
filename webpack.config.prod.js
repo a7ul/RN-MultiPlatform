@@ -13,12 +13,12 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'bundle'),
+    path: path.resolve(__dirname, 'web'),
     publicPath: '/',
     sourceMapFilename: 'bundle.js.map'
   },
   resolve: {
-    extensions: ['.web.js','.js', '.jsx']
+    extensions: ['.web.js', '.js', '.jsx']
   },
   module: {
     rules: [

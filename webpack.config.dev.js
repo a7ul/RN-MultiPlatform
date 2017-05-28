@@ -27,7 +27,7 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'bundle'),
+    path: path.resolve(__dirname, 'web'),
     publicPath: '/',
     // necessary for HMR to know where to load the hot update chunks
     sourceMapFilename: 'bundle.js.map'
@@ -65,7 +65,7 @@ module.exports = {
   devServer: {
     port: devServerPort,
     quiet: true, // This is because we are using another friendlyErrorMessagePlugin
-    contentBase: path.resolve(__dirname, 'bundle'),
+    contentBase: path.resolve(__dirname, 'web'),
     // match the output path
     publicPath: '/',
     compress: true,

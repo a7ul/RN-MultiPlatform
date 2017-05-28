@@ -1,5 +1,5 @@
 export default {
-  container:{
-    padding:20
+  container: {
+    padding: 20
   }
-}
+};
