@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Platform} from 'react-native';
 import styles from './Home.component.style';
 
 class HomeView extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text>Test</Text>
+        <Text>Test {Platform.OS}</Text>
       </View>
     );
   }

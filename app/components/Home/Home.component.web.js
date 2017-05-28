@@ -6,7 +6,7 @@ class HomeView extends Component {
   render () {
     return (
       <div style={styles.container}>
-        <p>Test</p>
+        <p>Test web</p>
       </div>
     );
   }
